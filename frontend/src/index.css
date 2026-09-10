@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Design tokens — "instrument panel" direction.
+   The subject is candle formation itself: a trader watching a printer
+   stamp out one bar at a time. Palette and type borrow from that world —
+   dark ground like a dim trading desk at night, a warm amber "live/unknown"
+   signal for the bar still being formed, and a monospace face for every
+   number so columns of price data line up like a ticker tape.
+   ========================================================================== */
+:root {
+  /* Color */
+  --ink-950: #0a0d13;
+  --ink-900: #0e121a;
+  --ink-800: #131822;
+  --ink-700: #1a212e;
+  --ink-600: #232c3d;
+  --line: #232b3a;
+  --line-soft: #1a2029;
+
+  --text-hi: #e7eaf1;
+  --text-mid: #a7b0c0;
+  --text-lo: #6b7385;
+
+  --bull: #35b8a6;
+  --bull-dim: #1f4d47;
+  --bear: #e2584f;
+  --bear-dim: #4d2622;
+
+  --signal: #e8a33d;   /* the "opening price only" reveal state */
+  --signal-dim: #4a3618;
+
+  --focus: #6fb7ff;
+
+  /* Type */
+  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'SFMono-Regular', ui-monospace, 'Menlo', 'Consolas', monospace;
+
+  /* Layout */
+  --radius: 4px;
+  --toolbar-h: 56px;
+  --statusbar-h: 34px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--ink-950);
+  color: var(--text-hi);
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+button, input, select {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--signal-dim);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 1px;
+}
+
+/* thin scrollbars where they appear (warnings panel, etc.) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--ink-600);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

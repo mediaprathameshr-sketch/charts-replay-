@@ -1,0 +1,59 @@
+======================================================================
+PROJECT STRUCTURE
+======================================================================
+Root: D:\Fin\Prod\chartreplay
+
+├── backend/
+│   ├── csv_loader.py
+│   ├── heiken.py
+│   ├── main.py
+│   ├── models.py
+│   └── requirements.txt
+├── data/
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── ChartPanel.tsx
+│   │   │   ├── ReplayControls.tsx
+│   │   │   ├── StatusBar.tsx
+│   │   │   └── Toolbar.tsx
+│   │   ├── hooks/
+│   │   │   ├── useChartSync.ts
+│   │   │   └── useReplay.ts
+│   │   ├── services/
+│   │   │   └── api.ts
+│   │   ├── utils/
+│   │   │   ├── csv.ts
+│   │   │   └── heiken.ts
+│   │   ├── App.css
+│   │   ├── App.tsx
+│   │   ├── index.css
+│   │   ├── main.tsx
+│   │   ├── types.ts
+│   │   └── vite-env.d.ts
+│   ├── .eslintrc.cjs
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── tsconfig.json
+│   ├── tsconfig.node.json
+│   ├── tsconfig.node.tsbuildinfo
+│   ├── tsconfig.tsbuildinfo
+│   ├── vite.config.d.ts
+│   ├── vite.config.js
+│   └── vite.config.ts
+├── fx_data/
+├── .gitignore
+├── conversion.py
+├── get_data.py
+├── python github_setup.py
+├── README.md
+
+======================================================================
+SUMMARY
+======================================================================
+Folders: 10
+Files shown: 36
+CSV files: 17
+======================================================================
